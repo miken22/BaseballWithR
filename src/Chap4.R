@@ -1,15 +1,17 @@
 # Chapter 4
+# Following the examples worked through in the chapter with modifications
+# to players/teams followed. Written by Mike Nowicki.
 
 # Load packages into environment if not already.
 require(curl)
 require(data.table)
-require(chron, dplyr)
+require(chron)
+require(dplyr)
 require(Lahman)
 require(pacman)
 require(pitchRx)
 require(plyr)
 require(retrosheet)
-p_load(Lahman, dplyr)
 
 # Chapter 4.2, Runs and Wins
 teams <- subset(Teams, Teams$yearID > 1990)[, c("teamID", "yearID", "lgID", "G", "W", "L", "R", "RA")]
