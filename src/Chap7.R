@@ -78,34 +78,13 @@ drew.pbp2015$c32 <- grepl("^[CFKLMOQRST]*[BIPV][CFKLMOQRST]*[BIPV][CFKLMOQRST]*[
   grepl("^[BIPV]*[CFKLMOQRST][BIPV]*[CFKLMOQRST]", drew.pbp2015$PITCH_SEQ)
 
 # Convert TRUE/FALSE to 1/0:
-drew.pbp2015$c01 <- gsub("FALSE", 0, drew.pbp2015$c01)
-drew.pbp2015$c01 <- gsub("TRUE", 1, drew.pbp2015$c01)
-drew.pbp2015$c02 <- gsub("FALSE", 0, drew.pbp2015$c02)
-drew.pbp2015$c02 <- gsub("TRUE", 1, drew.pbp2015$c02)
-
-drew.pbp2015$c10 <- gsub("FALSE", 0, drew.pbp2015$c10)
-drew.pbp2015$c10 <- gsub("TRUE", 1, drew.pbp2015$c10)
-drew.pbp2015$c20 <- gsub("FALSE", 0, drew.pbp2015$c20)
-drew.pbp2015$c20 <- gsub("TRUE", 1, drew.pbp2015$c20)
-drew.pbp2015$c30 <- gsub("FALSE", 0, drew.pbp2015$c30)
-drew.pbp2015$c30 <- gsub("TRUE", 1, drew.pbp2015$c30)
-
-drew.pbp2015$c11 <- gsub("FALSE", 0, drew.pbp2015$c11)
-drew.pbp2015$c11 <- gsub("TRUE", 1, drew.pbp2015$c11)
-
-drew.pbp2015$c12 <- gsub("FALSE", 0, drew.pbp2015$c12)
-drew.pbp2015$c12 <- gsub("TRUE", 1, drew.pbp2015$c12)
-
-drew.pbp2015$c21 <- gsub("FALSE", 0, drew.pbp2015$c21)
-drew.pbp2015$c21 <- gsub("TRUE", 1, drew.pbp2015$c21)
-drew.pbp2015$c31 <- gsub("FALSE", 0, drew.pbp2015$c31)
-drew.pbp2015$c31 <- gsub("TRUE", 1, drew.pbp2015$c31)
-
-drew.pbp2015$c22 <- gsub("FALSE", 0, drew.pbp2015$c22)
-drew.pbp2015$c22 <- gsub("TRUE", 1, drew.pbp2015$c22)
-
-drew.pbp2015$c32 <- gsub("FALSE", 0, drew.pbp2015$c32)
-drew.pbp2015$c32 <- gsub("TRUE", 1, drew.pbp2015$c32)
+for( i in 0:3) {
+  for (j in 0:2) {
+    col.name <- paste("c", i, j, sep = "")
+    drew.pbp2015[,col.name] <- gsub("FALSE", 0, drew.pbp2015[,col.name])
+    drew.pbp2015[,col.name] <- gsub("TRUE", 1, drew.pbp2015[,col.name])
+  }
+}
 
 # Compute the run values since I'm not using their provided data:
 drew.pbp2015$RUNS <- with(drew.pbp2015, AWAY_SCORE_CT + HOME_SCORE_CT)
