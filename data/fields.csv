@@ -6,16 +6,17 @@ Field number,Description,Header
 4,Outs,OUTS_CT
 5,Balls,BALLS_CT
 6,Strikes,STRIKES_CT
-7,Visitor score,AWAY_SCORE_CT
-8,Home score,HOME_SCORE_CT
-9,Batter,BAT_ID
-10,Batter hand,BAT_HAND_CD
-11,Pitcher,PIT_ID
-12,Pitcher hand,PIT_HAND_CD
-13,Runner on first,BASE1_RUN_ID
-14,Runner on second,BASE2_RUN_ID
-15,Runner on third,BASE3_RUN_ID
-16,Event text,EVENT_TX
+7,Pitch Sequence,PITCH_SEQ
+8,Visitor score,AWAY_SCORE_CT
+9,Home score,HOME_SCORE_CT
+10,Batter,BAT_ID
+11,Batter hand,BAT_HAND_CD
+12,Pitcher,PIT_ID
+13,Pitcher hand,PIT_HAND_CD
+14,Runner on first,BASE1_RUN_ID
+15,Runner on second,BASE2_RUN_ID
+16,Runner on third,BASE3_RUN_ID
+17,Event text,EVENT_TX
 18,Leadoff flag,LEADOFF_FL
 19,Pinch-hit flag,PH_FL
 20,Defensive position,BAT_FLD_CD

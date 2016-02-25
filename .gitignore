@@ -3,5 +3,7 @@
 *.EVN
 *.RData
 *.Rhistory
+*.sqlite
 TEAM
+TEAM2015
 BEVENT.EXE
